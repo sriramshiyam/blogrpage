@@ -1,0 +1,289 @@
+html {
+  font-size: 16px;
+}
+
+* {
+  transition: all 0.5s;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 9vh;
+  z-index: 1000;
+  padding: 7vh 5vw;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-bottom-left-radius: 110px;
+}
+
+nav h2 {
+  font-family: "Overpass", sans-serif;
+  font-size: 2.5rem;
+  flex-basis: 5%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 2.7rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+.nav-info {
+  display: flex;
+  flex-basis: 95%;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.nav-info hr {
+  display: none;
+}
+
+.nav-btns button:nth-child(1) {
+  border: 0;
+  outline: none;
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  background: transparent;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-btns button:nth-child(2) {
+  margin-left: 8px;
+  outline: none;
+  border: 0;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px 20px;
+  color: hsl(353, 100%, 62%);
+  background-color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-btns button:nth-child(2):hover {
+  color: white;
+  background-color: hsl(355, 100%, 74%);
+}
+
+.intro {
+  position: sticky;
+  top: -87vh;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  overflow: hidden;
+  border-bottom-left-radius: 110px;
+  z-index: 999;
+}
+
+.intro-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+.intro-details h1 {
+  font-size: 4rem;
+  font-family: "Overpass", sans-serif;
+}
+
+.intro-details p {
+  font-size: 1.3rem;
+  font-family: "Ubuntu", sans-serif;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.intro-btns {
+  margin-top: 8vh;
+}
+
+.intro-btns button:nth-child(1) {
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1.3rem;
+  font-family: "Ubuntu", sans-serif;
+  padding: 12px 20px;
+  color: hsl(353, 100%, 62%);
+  background-color: white;
+  font-weight: 700;
+}
+
+.intro-btns button:nth-child(1):hover {
+  cursor: pointer;
+  color: white;
+  background-color: hsl(355, 100%, 74%);
+}
+
+.intro-btns button:nth-child(2) {
+  margin-left: 20px;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px 20px;
+  color: white;
+  background-color: hsl(353, 100%, 62%);
+  font-weight: 700;
+}
+
+.intro-btns button:nth-child(2):hover {
+  cursor: pointer;
+  color: hsl(355, 100%, 74%);
+  background-color: white;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  background: url(images/bg-pattern-intro.svg);
+  background-size: 300vh;
+  background-position: -10vw;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.menu-icon {
+  height: 20px;
+  width: 20px;
+  display: none;
+  overflow: visible;
+}
+
+@media screen and (max-width: 720px) {
+  nav {
+    justify-content: space-between;
+    border-bottom-left-radius: 90px;
+    padding: 7vh 10vw;
+  }
+
+  nav ul {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-bottom: 2rem;
+    color: black;
+  }
+
+  nav li:nth-child(3) {
+    margin-bottom: 1rem;
+  }
+
+  nav h2 {
+    font-size: 1.8rem;
+  }
+
+  .nav-info {
+    position: absolute;
+    width: 90%;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+  }
+
+  .nav-info hr {
+    display: block;
+    width: 80%;
+  }
+
+  .nav-btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-btns button:nth-child(1) {
+    margin-top: 1rem;
+    color: black;
+  }
+
+  .nav-btns button:nth-child(2) {
+    color: white;
+    margin: 0;
+    margin-top: 1rem;
+    background: linear-gradient(
+      to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%)
+    );
+  }
+
+  .menu-icon {
+    display: block;
+    transform: translateY(-5px);
+  }
+
+  .intro {
+    border-bottom-left-radius: 90px;
+  }
+
+  .intro-details {
+    width: 93vw;
+  }
+
+  .intro-details h1 {
+    font-size: 2.8rem;
+  }
+
+  .intro-details p {
+    font-size: 1rem;
+  }
+
+  .intro::after {
+    background-size: 200vh;
+    background-position: -100vw;
+  }
+
+  .intro-btns button:nth-child(1),
+  .intro-btns button:nth-child(2) {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
